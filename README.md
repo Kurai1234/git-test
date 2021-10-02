@@ -3,7 +3,7 @@
 ## Installation
 1. Sign into ubuntu server and type
 ```
-sudo apt insttall postgresql
+sudo apt install postgresql
 ```
 
 ## Configuration
