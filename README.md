@@ -7,12 +7,12 @@ sudo apt install postgresql
 ```
 
 ## Configuration
-1. To allow multiple TCP/IP connection. Config the 'postgresql.conf' file.
+1. To allow multiple TCP/IP connection. Config the `postgresql.conf` file.
 2. To access the directory of this file. Type:
 ```
 cd /etc/postgresql/12/main
 ```
-3.Then finally 'vim postgresql.conf' and look for the 'listen_addresses=' and change `localhost` to '*'
+3.Then finally `vim postgresql.conf` and look for the `listen_addresses=` and change `localhost` to `*`.
 
 ## Connecting and creating a database
 1. Enter postgresql with the following command
@@ -25,7 +25,7 @@ CREATE DATABASE <database name>;
 \list
 ```
 
-3.To connect to a database use the the '\c <database>' command, in my case the 'pink turtle' database
+3.To connect to a database use the the `\c <database>` command, in my case the `pink turtle` database
 ```
 \c pinkturtle
 ```
@@ -35,11 +35,11 @@ CREATE DATABASE <database name>;
 You are now connected to database ''pinkturtle'' as user ''postgres''.
 ```
 ## Creating a new User
-1.to create a new user, use the 'CREATE USER' command.
+1.to create a new user, use the `CREATE USER` command.
 ```
 CREATE USER pinkturtle WITH PASSWORD '123';
 ```
-2. To exit postgresql, type the 'exit;' command and it will bring you back to 'home directory'.
+2. To exit postgresql, type the `exit;` command and it will bring you back to `home directory`.
 
 
 ## logging in a database with a new user
@@ -54,7 +54,7 @@ psql --host=localhost --dbname=pinkturtle --user=pinkturtle
 ```
 
 ## Check current user on database
-1. To check how much users on the database, use the 'SELECT current_user'. 
+1. To check how much users on the database, use the `SELECT current_user`. 
 
 
 
@@ -105,7 +105,7 @@ Nginx HTTP (v6)            ALLOW       Anywhere (v6)
 sudo ufw enable
 ```
 
-4.Verify your everything is running, type the 'systemctl status nginx' and you should receive the followin.
+4.Verify your everything is running, type the `systemctl status nginx` and you should receive the followin.
 ```
 
 Output
@@ -126,7 +126,16 @@ Output
 ```
 http://<your server ip>
 ```
--to check your server ip address, type the 'ip a' command and use the ip listed after `inet`.
--usually its a ip after the 2:enp0s3 block.
+-to check your server ip address, type the `ip a` command and use the ip listed after `inet`.
+-usually its a ip after the `2:enp0s3 block`.
 
-6.Done correctly, the landing page would output 'Welcome to Nginx'
+6.Done correctly, the landing page would output 
+```
+Welcome to nginx!
+If you see this page, the nginx web server is successfully installed and working. Further configuration is required.
+
+For online documentation and support please refer to nginx.org.
+Commercial support is available at nginx.com.
+
+Thank you for using nginx.
+```
