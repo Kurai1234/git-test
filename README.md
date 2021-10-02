@@ -1,4 +1,4 @@
-#Setting up Postgresql
+# Setting up Postgresql
 
 ##Installation
 1. Sign into ubuntu server and type
