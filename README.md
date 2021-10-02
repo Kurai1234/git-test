@@ -12,7 +12,7 @@ sudo apt install postgresql
 ```
 cd /etc/postgresql/12/main
 ```
-3.Then finally 'vim postgresql.conf' and look for the 'listen_addresses=' and change 'localhost' to '*'
+3.Then finally 'vim postgresql.conf' and look for the 'listen_addresses=' and change ' localhost ' to '*'
 
 ## Connecting and creating a database
 1. Enter postgresql with the following command
